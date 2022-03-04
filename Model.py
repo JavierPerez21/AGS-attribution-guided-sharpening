@@ -27,7 +27,7 @@ class Model:
         self.model.to(self.device)
 
         # Set up log path
-        defense_log = self.defense_name + "_" + str(datetime.datetime.now()).replace(" ", "_").replace(":", "-")[:19]
+        defense_log = self.defense_name + "_" + str(datetime.datetime.now()).replace(" ", "-").replace(":", "-")[:19]
         self.log_path = self.config['experiment_path'] + defense_log + ".txt"
         self.defense_path = self.config['experiment_path'] + defense_log + ".pth"
         with open(self.log_path, 'a') as fp:
